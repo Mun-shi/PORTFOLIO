@@ -6,8 +6,10 @@
   background-color: white;
   color: black;
   padding: 5px;
+  
 
   .bg {
+    z-index: 999;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -36,6 +38,7 @@
   }
 
   button {
+    z-index: 999;
     width: 50px;
     height: 50px;  /* Removed the conflicting height */
     border-radius: 50%;
@@ -44,6 +47,5 @@
     left: 25px;  /* Adjust the left position to ensure visibility */
     background-color: transparent;
     border: none;
-    z-index: 10;  /* Ensure the button is above other elements */
   }
 }
