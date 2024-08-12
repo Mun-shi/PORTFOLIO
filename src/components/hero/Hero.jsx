@@ -14,7 +14,29 @@ const textVariants = {
         staggerChildren: 0.1,
     }
  },
+ scrollButton:{
+    opacity:0,
+    y:10,
+    transition:{
+        duration:2,
+        repeat:Infinity,
+    }
+ }
 };
+
+const sliderVariants = {
+    initial: {
+       x: 0,
+    },
+    animate: {
+       x: "-220%",
+       transition: {
+           repeat:Infinity,
+           repeatType:"mirror",
+           duration:20,
+       },
+    },
+   };
 
 const Hero = () => {
   return (
@@ -32,12 +54,12 @@ const Hero = () => {
                     <motion.button variants={textVariants}>See the latest works</motion.button>
                     <motion.button variants={textVariants}>Contact Me</motion.button>
                 </motion.div>
-                <motion.img variants={textVariants} src="/scroll.png" alt="" />
+                <motion.img variants={textVariants} animate= "scrollButton" src="/scroll.png" alt="" />
             </motion.div>
         </div>
-        <div className="slidingTextContainer">
+        <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
             Software Developement Engineer
-        </div>
+        </motion.div>
         <div className="imageContainer">
             <img src="/munshi1.png" alt="" />
         </div>
