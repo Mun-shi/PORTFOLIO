@@ -1,0 +1,49 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  padding: 5px;
+
+  .bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    background: white;
+    cursor: pointer;
+    padding: 5px;
+    
+    .links {
+      padding: 5px;
+      margin: 2px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {  
+        font-size: 40px;
+      }
+    }
+  }
+
+  button {
+    width: 50px;
+    height: 50px;  /* Removed the conflicting height */
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    left: 25px;  /* Adjust the left position to ensure visibility */
+    background-color: transparent;
+    border: none;
+    z-index: 10;  /* Ensure the button is above other elements */
+  }
+}
