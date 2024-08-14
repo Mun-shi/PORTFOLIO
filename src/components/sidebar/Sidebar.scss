@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -5,47 +6,51 @@
   justify-content: center;
   background-color: white;
   color: black;
-  padding: 5px;
   
-
   .bg {
     z-index: 999;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     width: 400px;
     background: white;
-    cursor: pointer;
-    padding: 5px;
-    
+
+    @include mobile {
+      width: 200px;
+    }
+
     .links {
-      padding: 5px;
-      margin: 2px;
       position: absolute;
-      height: 100%;
       width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 20px;
 
-      a {  
+      a {
         font-size: 40px;
+
+        @include mobile {
+          font-size: 20px;
+        }
       }
     }
   }
 
   button {
     z-index: 999;
+    position: fixed;
     width: 50px;
-    height: 50px;  /* Removed the conflicting height */
+    height: 50px;
     border-radius: 50%;
     position: fixed;
     top: 25px;
-    left: 25px;  /* Adjust the left position to ensure visibility */
+    left: 25px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 }
